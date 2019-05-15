@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "C:\\Users\\Morge\\Anaconda3\\envs\\tensorflow-gpu\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.pep8Args": [
+        "--ignore=E501" 
+    ],
+}
