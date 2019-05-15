@@ -3,6 +3,7 @@
 
 import tensorflow as tf
 
+
 class TRNNConfig(object):
     """RNN配置参数"""
 
@@ -12,11 +13,11 @@ class TRNNConfig(object):
     num_classes = 10        # 类别数
     vocab_size = 5000       # 词汇表达小
 
-    num_layers= 2           # 隐藏层层数
+    num_layers = 2           # 隐藏层层数
     hidden_dim = 128        # 隐藏层神经元
     rnn = 'gru'             # lstm 或 gru
 
-    dropout_keep_prob = 0.8 # dropout保留比例
+    dropout_keep_prob = 0.8  # dropout保留比例
     learning_rate = 1e-3    # 学习率
 
     batch_size = 128         # 每批训练大小
@@ -47,7 +48,7 @@ class TextRNN(object):
         def gru_cell():  # gru核
             return tf.contrib.rnn.GRUCell(self.config.hidden_dim)
 
-        def dropout(): # 为每一个rnn核后面加一个dropout层
+        def dropout():  # 为每一个rnn核后面加一个dropout层
             if (self.config.rnn == 'lstm'):
                 cell = lstm_cell()
             else:
