@@ -4,7 +4,7 @@ import sys
 from collections import Counter
 
 import numpy as np
-import tensorflow.keras as kr
+import tensorflow.contrib.keras as kr
 
 if sys.version_info[0] > 2:
     is_py3 = True
@@ -83,7 +83,7 @@ def read_vocab(vocab_dir):
 
 def read_category():
     """读取分类目录，固定"""
-    categories = ['体育', '财经', '房产', '家居', '教育', '科技', '时尚', '时政', '游戏', '娱乐']
+    categories = ["时尚", "财经", "游戏", "体育", "科技"]
 
     categories = [native_content(x) for x in categories]
 
